@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23"/>
+      <stop offset="100%" style="stop-color:#1a1040"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5d061"/>
+      <stop offset="50%" style="stop-color:#e8b830"/>
+      <stop offset="100%" style="stop-color:#c9a84c"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="eyeGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5d061"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="2" opacity="0.8"/>
+
+  <!-- Background glow behind head -->
+  <circle cx="200" cy="190" r="90" fill="#a78bfa" opacity="0.1" filter="url(#softGlow)"/>
+
+  <!-- Helmet crest (owl-inspired geometric wings) -->
+  <g transform="translate(200, 70)" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" opacity="0.9">
+    <!-- Left wing -->
+    <path d="M0,0 L-28,-40 L-20,-40 L-12,-25 L-8,-38 L0,-28" fill="#1a1040" fill-opacity="0.5"/>
+    <path d="M-28,-40 L-22,-35" stroke-width="1.5"/>
+    <path d="M-20,-40 L-16,-34" stroke-width="1.5"/>
+    <!-- Right wing -->
+    <path d="M0,0 L28,-40 L20,-40 L12,-25 L8,-38 L0,-28" fill="#1a1040" fill-opacity="0.5"/>
+    <path d="M28,-40 L22,-35" stroke-width="1.5"/>
+    <path d="M20,-40 L16,-34" stroke-width="1.5"/>
+    <!-- Center crest ridge -->
+    <line x1="0" y1="0" x2="0" y2="-42" stroke-width="3"/>
+    <circle cx="0" cy="-44" r="4" fill="url(#goldGrad)" stroke="none"/>
+  </g>
+
+  <!-- Helmet dome -->
+  <path d="M130,160 Q130,90 200,85 Q270,90 270,160 L260,165 Q260,100 200,96 Q140,100 140,165 Z"
+        fill="#1a1040" fill-opacity="0.6" stroke="url(#goldGrad)" stroke-width="2"/>
+
+  <!-- Helmet cheek guards (Corinthian style) -->
+  <g stroke="url(#goldGrad)" stroke-width="2" fill="#1a1040" fill-opacity="0.5">
+    <!-- Left cheek -->
+    <path d="M130,160 L120,175 Q115,195 125,210 L130,215 L138,210 L138,165 Z"/>
+    <!-- Right cheek -->
+    <path d="M270,160 L280,175 Q285,195 275,210 L270,215 L262,210 L262,165 Z"/>
+  </g>
+
+  <!-- Helmet nose guard -->
+  <path d="M195,155 L195,200 L205,200 L205,155" fill="none" stroke="url(#goldGrad)" stroke-width="2.5"/>
+
+  <!-- Eyes - glowing -->
+  <g filter="url(#glow)">
+    <!-- Left eye -->
+    <ellipse cx="175" cy="172" rx="14" ry="7" fill="#0f0f23" stroke="url(#eyeGlow)" stroke-width="2"/>
+    <ellipse cx="175" cy="172" rx="6" ry="3" fill="#f5d061" opacity="0.9"/>
+    <ellipse cx="175" cy="172" rx="3" ry="1.5" fill="#ffffff" opacity="0.6"/>
+    <!-- Right eye -->
+    <ellipse cx="225" cy="172" rx="14" ry="7" fill="#0f0f23" stroke="url(#eyeGlow)" stroke-width="2"/>
+    <ellipse cx="225" cy="172" rx="6" ry="3" fill="#a78bfa" opacity="0.9"/>
+    <ellipse cx="225" cy="172" rx="3" ry="1.5" fill="#ffffff" opacity="0.6"/>
+  </g>
+
+  <!-- Data scan lines across eyes -->
+  <g stroke="#f5d061" stroke-width="1" opacity="0.4" fill="none">
+    <line x1="155" y1="168" x2="245" y2="168"/>
+    <line x1="158" y1="176" x2="242" y2="176"/>
+  </g>
+
+  <!-- Mouth / Jaw — geometric, stoic -->
+  <path d="M185,210 L200,218 L215,210" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Neck -->
+  <rect x="175" y="215" width="50" height="20" rx="3" fill="#1a1040" fill-opacity="0.4" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Shoulders / armor plate -->
+  <path d="M115,240 Q200,260 285,240 L275,255 Q200,275 125,255 Z"
+        fill="none" stroke="url(#purpleGrad)" stroke-width="2" opacity="0.5"/>
+
+  <!-- Ornamental dots on shoulders -->
+  <g fill="url(#goldGrad)" opacity="0.5">
+    <circle cx="140" cy="248" r="2.5"/>
+    <circle cx="160" cy="252" r="2.5"/>
+    <circle cx="200" cy="258" r="2.5"/>
+    <circle cx="240" cy="252" r="2.5"/>
+    <circle cx="260" cy="248" r="2.5"/>
+  </g>
+
+  <!-- NFT diamond accent on chest -->
+  <g transform="translate(200, 240)" stroke="url(#purpleGrad)" stroke-width="1.5" fill="none" opacity="0.5">
+    <polygon points="0,-10 8,0 0,10 -8,0" fill="#1a1040" fill-opacity="0.4"/>
+  </g>
+
+  <!-- Floating data particles around head -->
+  <g filter="url(#glow)" opacity="0.6">
+    <circle cx="95" cy="140" r="2" fill="#a78bfa"/>
+    <circle cx="110" cy="110" r="1.5" fill="#f5d061"/>
+    <circle cx="305" cy="140" r="2" fill="#a78bfa"/>
+    <circle cx="290" cy="115" r="1.5" fill="#f5d061"/>
+    <circle cx="200" cy="60" r="2" fill="#a78bfa"/>
+    <circle cx="120" cy="185" r="1" fill="#f5d061"/>
+    <circle cx="280" cy="190" r="1" fill="#f5d061"/>
+  </g>
+
+  <!-- Small chain link at bottom -->
+  <g transform="translate(200, 275)" fill="none" stroke="url(#goldGrad)" opacity="0.6" stroke-width="1.5">
+    <rect x="-4" y="0" width="8" height="12" rx="4"/>
+    <rect x="-4" y="12" width="8" height="12" rx="4"/>
+  </g>
+
+  <!-- Outer decorative ring pattern (Greek key simplified) -->
+  <g fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.15">
+    <path d="M20,100 h15 v12 h-10 v-8 h8" />
+    <path d="M380,100 h-15 v12 h10 v-8 h-8" />
+    <path d="M20,300 h15 v-12 h-10 v8 h8" />
+    <path d="M380,300 h-15 v-12 h10 v8 h-8" />
+  </g>
+</svg>

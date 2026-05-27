@@ -9,6 +9,12 @@
 
 Kleos is a [Bankr](https://bankr.bot) skill that transforms your AI agent into a full-stack NFT trading machine. It works on Telegram, X (Twitter), and the Bankr web terminal — all through natural language.
 
+<p align="center">
+  <img src="assets/mascot.svg" alt="Kleos Mascot" width="160">
+  <br>
+  <em>A Greek warrior with one golden eye (profit) and one purple eye (strategy), scanning the blockchain for NFT glory.</em>
+</p>
+
 ---
 
 ## Features
