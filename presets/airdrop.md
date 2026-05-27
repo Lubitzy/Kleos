@@ -1,8 +1,8 @@
-# 🎁 Airdrop Checker — Copy-Paste Automations
+# 🎁 Airdrop Checker — Copy-Paste Commands
 
 Copy any of these commands directly into your Bankr agent.
 
-> 💡 Kleos checks your **Bankr wallet** automatically. For external wallets (MetaMask, Ledger, Phantom), just provide the address. Kleos checks eligibility but cannot claim from external wallets — you'll need to claim manually from that wallet's interface.
+> 💡 **Kleos checks airdrop eligibility using on-chain methods** — contract queries, OpenSea API, Etherscan transaction history, and merkle proof verification. **No browser wallet connection needed.** If a claim page requires connecting MetaMask/Rabby, Kleos will tell you to check manually and offer on-chain verification.
 
 ## Wallet Management
 
@@ -22,46 +22,88 @@ show my tracked wallets
 remove wallet 0x1234... from my tracker
 ```
 
-## Eligibility Check (Bankr Wallet)
+## On-Chain NFT Holding Check (Most Reliable)
 
 ```
-check if I'm eligible for the [project] airdrop
-```
-
-```
-am I eligible for any airdrops right now?
+check if I hold any [collection] NFTs
 ```
 
 ```
-what airdrop phases am I eligible for in [project]?
-```
-
-## Eligibility Check (External Wallets)
-
-```
-check if 0x1234... is eligible for [project] airdrop
+check if 0x1234... holds [collection] NFTs
 ```
 
 ```
-check [project] eligibility for wallet 0x5678...
+check [collection] holdings for all my tracked wallets
 ```
 
 ```
-check [project] phases for 0xabcd... — which phases are they eligible for?
+which of my wallets hold [collection] NFTs?
 ```
 
-## Batch Multi-Wallet Check
+## Snapshot Verification
 
 ```
-check airdrop eligibility for 0x1234..., 0x5678..., and solana:Abc...
-```
-
-```
-check [project] eligibility for all my tracked wallets
+did I hold [collection] before March 15, 2026?
 ```
 
 ```
-scan all my wallets for any unclaimed airdrops
+verify if 0xabcd... was a holder of [collection] at block 19000000
+```
+
+```
+check snapshot eligibility for [project] — did I hold before the cutoff?
+```
+
+## OpenSea API — Full NFT Holdings
+
+```
+what NFTs does 0x1234... own?
+```
+
+```
+show all NFT holdings for my tracked wallets
+```
+
+```
+compare which collections I hold across all wallets
+```
+
+## Transaction History Check (Protocol Airdrops)
+
+```
+check if I ever interacted with [protocol] contract
+```
+
+```
+did wallet 0x1234... use [dApp] before their snapshot?
+```
+
+```
+show [protocol] interaction history for all my tracked wallets
+```
+
+## Claim Page Discovery (Read-Only)
+
+```
+find the official claim page for [project] airdrop
+```
+
+```
+when is the [project] airdrop claim deadline?
+```
+
+```
+monitor [project] claim page — alert me when claim opens
+```
+
+## Merkle Proof Verification
+
+```
+check if 0x1234... is in [project] merkle tree
+```
+
+```
+verify my merkle proof eligibility for [project]
 ```
 
 ## Airdrop Discovery
@@ -71,106 +113,59 @@ what airdrops are coming up?
 ```
 
 ```
-are there any new NFT airdrops or token airdrops I should know about?
+are there any new NFT airdrops I should know about?
 ```
 
 ```
-show me upcoming community airdrops on Base and Ethereum
+check if I'm eligible for any new airdrops right now
 ```
 
-## Recurring Discovery
+## Discovery Automation
 
 ```
-every day at 10am, search for new airdrop announcements and check my eligibility
-```
-
-```
-every Monday, scan for upcoming airdrops with snapshots in the next 2 weeks
+every day at 10am, search for new airdrop announcements
 ```
 
 ```
-every 6 hours, check my tracked airdrops for changes in eligibility or claim dates
-```
-
-## Claim Monitoring
-
-```
-alert me when [project] airdrop is claimable
+every Monday, scan upcoming airdrops and check my eligibility
 ```
 
 ```
-every day at 9am, check [claim URL] and alert me if the airdrop claim is live
+every 12 hours, check my tracked claim pages for status changes
+```
+
+## Batch Multi-Wallet Check
+
+```
+check [project] eligibility for all my tracked wallets using on-chain data
 ```
 
 ```
-monitor [project] for airdrop claim opening — check every 12 hours
+scan all my tracked wallets for any unclaimed airdrops
 ```
 
-## Deadline Alerts
+## Value Tracking
 
 ```
-set a reminder 48 hours before [project] airdrop claim deadline
-```
-
-```
-check all my tracked airdrops for expiring claims and alert me
+what's my total airdrop value — claimed + pending?
 ```
 
 ```
-every day, check claim deadlines for tracked airdrops. Alert me if any expire within 3 days
-```
-
-## Claim Tracking
-
-```
-show my claimed and unclaimed airdrops
+how much have I made from airdrops?
 ```
 
 ```
-did I receive any new airdrops in my wallet?
+estimate the value of my pending unclaimed airdrops
+```
+
+## Wallet Security
+
+```
+scan my wallet for suspicious or spam NFTs
 ```
 
 ```
-how much have I made from airdrops total?
-```
-
-## Phase-by-Phase Check
-
-```
-check which airdrop phases I'm eligible for in [project]:
-- Phase 1: Early Users (check if wallet interacted before [date])
-- Phase 2: Holders (check if wallet held [token] at snapshot)
-- Phase 3: Community (check Discord/Twitter engagement)
-```
-
-## New Token Detection
-
-```
-every 12 hours, scan my wallet for unexpected token/NFT transfers that might be airdrops
-```
-
-```
-check my recent wallet activity for any airdrops I might have missed
-```
-
-## Airdrop Value Tracking
-
-```
-what's my total portfolio including unclaimed airdrops?
-```
-
-```
-estimate the value of my pending airdrops
-```
-
-## Anti-Scam Protection
-
-```
-warn me if you detect any suspicious airdrops or scam NFTs in my wallet
-```
-
-```
-every day, scan my wallet for dust attacks or spam NFTs
+warn me if any unknown tokens appear in my tracked wallets
 ```
 
 ## Combo Setup (Pro)
@@ -178,18 +173,18 @@ every day, scan my wallet for dust attacks or spam NFTs
 ```
 Set up airdrop monitoring:
 1. Every day at 10am, search for new airdrop announcements
-2. Check my wallet for unexpected token drops every 12 hours
-3. Monitor all tracked airdrops for claim opening dates
-4. Alert me 48h before any claim deadline
-5. Every Monday, send summary: claimed value, pending value, new opportunities
-6. Flag any suspicious NFTs or tokens as potential scams
+2. For each new airdrop found, check holdings on-chain for all tracked wallets
+3. Every Monday, scan NFT holdings via OpenSea API and cross-reference with known airdrops
+4. Alert me if any tracked wallet becomes eligible for a new airdrop
+5. Monitor claim pages for opening dates
+6. Alert 48h before any claim deadline
+7. Send weekly summary: claimed value, pending value, new opportunities
 ```
 
-## Safety Reminders
+## What Kleos CANNOT Do (Be Honest)
 
-> ⚠️ **Never share your seed phrase or private key** to claim an airdrop.  
-> ⚠️ **Legitimate airdrops don't charge upfront claim fees.**  
-> ⚠️ **Verify claim URLs** from official project Twitter/Discord only.  
-> ⚠️ **Don't interact with unknown NFTs** that suddenly appear in your wallet — they may be scams.
+When the user asks something impossible, tell them directly:
 
-> 💡 Airdrop checking uses Bankr's browser automation (requires Bankr Club or Max Mode). Most claim pages require connecting an external wallet — Bankr will guide you through the process.
+> ⚠️ Kleos cannot connect browser wallets. If a claim page requires MetaMask/Rabby/Phantom connection, go to the site manually in your browser and connect your wallet.
+>
+> ✅ But I CAN verify your holdings on-chain to confirm eligibility. Want me to check?

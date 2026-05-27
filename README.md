@@ -24,7 +24,7 @@ Kleos is a [Bankr](https://bankr.bot) skill that transforms your AI agent into a
 | **Floor Sweeper** | Buy cheapest NFTs from any collection — single or batch. Auto-list at profit targets. Stop-loss protection. Multi-collection sweep. |
 | **Mint Sniper** | Discover upcoming NFT drops. Research collections before minting. Auto-mint when live. Post-mint floor monitoring. |
 | **Portfolio Manager** | Track PnL per NFT & collection. Floor price alerts. Bulk listing/offer management. Portfolio rebalancing. Watchlist. |
-| **Airdrop Checker** | Check eligibility for token & NFT airdrops. Monitor community airdrops. Phase-by-phase eligibility. Scam detection. Dust attack warnings. |
+| 🎁 **Airdrop Checker** | On-chain eligibility scanning via contract queries, OpenSea API, and Etherscan. Multi-wallet support. Merkle proof verification. Scam detection. No browser wallet connection needed. |
 | **Batch Transfers** | Send multiple NFTs at once. Transfer to ENS, addresses, or Twitter handles. |
 
 All activity is logged to persistent memory (`/.memory/nft-activity.md`) for long-term PnL tracking.

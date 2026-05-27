@@ -28,6 +28,7 @@ Activate this skill whenever the user mentions:
 2. **Use OpenSea links when possible.** They are the most reliable way to identify specific NFTs. When a user mentions a collection by name, search for it first to get the correct contract.
 3. **Prefer Base for gas-sponsored transactions.** Gas fees on Ethereum mainnet can exceed the NFT value. Default to Base unless the user specifies another chain.
 4. **Track everything.** Log all NFT buys, sells, mints, and transfers so the user can see their PnL. Save logs to `/.memory/nft-activity.md`.
+5. **Be honest about limitations.** For airdrop checking, Kleos cannot connect browser wallets. Use on-chain queries (contract calls, OpenSea API, Etherscan) instead. If a claim page requires wallet connection, tell the user to check manually and offer to verify on-chain.
 
 ## Chains Supported
 
@@ -71,7 +72,7 @@ For full step-by-step workflows, see the reference files:
 - **Floor Sweeper** → `references/floor-sweeper.md` — Advanced floor sweeping: batch purchases, auto-profit targets, multi-collection sweeping, automated relisting
 - **Mint Sniper** → `references/mint-sniper.md` — Monitoring new drops, auto-mint strategies, collection research before minting
 - **Portfolio Manager** → `references/portfolio-manager.md` — Portfolio tracking, floor alerts, PnL calculation, offer management
-- **Airdrop Checker** → `references/airdrop-checker.md` — Eligibility checking workflows, community airdrop monitoring, multi-wallet support (Bankr + external MetaMask/Ledger/Phantom wallets)
+- **Airdrop Checker** → `references/airdrop-checker.md` — On-chain eligibility checking via contract queries, OpenSea API, and Etherscan. Multi-wallet support (Bankr + external addresses). Honest about limitations — no browser wallet connection possible. Uses 5 realistic methods: contract queries, OpenSea API, transaction history, claim page monitoring, and merkle proof verification.
 
 Load the relevant reference file when the user's request matches its topic.
 
