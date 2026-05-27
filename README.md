@@ -1,4 +1,4 @@
-# 🏛️ Kleos — NFT Agent for Bankr
+# Kleos — NFT Agent for Bankr
 
 > *κλέος* — the Greek concept of eternal glory earned through heroic deeds.  
 > **Kleos hunts NFT glory** — sweeping floors, sniping mints, managing portfolios, and claiming airdrops.
@@ -7,21 +7,21 @@ Kleos is a [Bankr](https://bankr.bot) skill that transforms your AI agent into a
 
 ---
 
-## ✨ Features
+## Features
 
 | Module | What It Does |
 |--------|-------------|
-| 🧹 **Floor Sweeper** | Buy cheapest NFTs from any collection — single or batch. Auto-list at profit targets. Stop-loss protection. Multi-collection sweep. |
-| 🎯 **Mint Sniper** | Discover upcoming NFT drops. Research collections before minting. Auto-mint when live. Post-mint floor monitoring. |
-| 📊 **Portfolio Manager** | Track PnL per NFT & collection. Floor price alerts. Bulk listing/offer management. Portfolio rebalancing. Watchlist. |
-| 🎁 **Airdrop Checker** | Check eligibility for token & NFT airdrops. Monitor community airdrops. Phase-by-phase eligibility. Scam detection. Dust attack warnings. |
-| 🔄 **Batch Transfers** | Send multiple NFTs at once. Transfer to ENS, addresses, or Twitter handles. |
+| **Floor Sweeper** | Buy cheapest NFTs from any collection — single or batch. Auto-list at profit targets. Stop-loss protection. Multi-collection sweep. |
+| **Mint Sniper** | Discover upcoming NFT drops. Research collections before minting. Auto-mint when live. Post-mint floor monitoring. |
+| **Portfolio Manager** | Track PnL per NFT & collection. Floor price alerts. Bulk listing/offer management. Portfolio rebalancing. Watchlist. |
+| **Airdrop Checker** | Check eligibility for token & NFT airdrops. Monitor community airdrops. Phase-by-phase eligibility. Scam detection. Dust attack warnings. |
+| **Batch Transfers** | Send multiple NFTs at once. Transfer to ENS, addresses, or Twitter handles. |
 
 All activity is logged to persistent memory (`/.memory/nft-activity.md`) for long-term PnL tracking.
 
 ---
 
-## 🚀 Quick Install
+## Quick Install
 
 In your Bankr agent ([bankr.bot](https://bankr.bot), [Telegram](https://t.me/bankr_ai_bot), or X):
 
@@ -33,7 +33,7 @@ install the skill at https://github.com/Lubitzy/kleos/tree/main
 
 ---
 
-## 💬 Usage Examples
+## Usage Examples
 
 ### Floor Sweeping
 ```
@@ -66,7 +66,7 @@ install the skill at https://github.com/Lubitzy/kleos/tree/main
 
 ---
 
-## ⚡ Automation Presets
+## Automation Presets
 
 Kleos comes with ready-to-use Bankr automation presets. See [`presets/`](presets/) for one-click setups:
 
@@ -81,7 +81,7 @@ Kleos comes with ready-to-use Bankr automation presets. See [`presets/`](presets
 
 ---
 
-## 📁 Memory System
+## Memory System
 
 Kleos saves state to your Bankr agent's persistent filesystem:
 
@@ -94,22 +94,22 @@ Kleos saves state to your Bankr agent's persistent filesystem:
 
 ---
 
-## 🔗 Supported Chains
+## Supported Chains
 
 NFT operations are available on: **Base**, **Ethereum**, **Polygon**, **Unichain**
 
-> 💡 Prefer **Base** — gas is sponsored by Bankr. Ethereum mainnet gas can exceed NFT value.
+> Prefer **Base** — gas is sponsored by Bankr. Ethereum mainnet gas can exceed NFT value.
 
 ---
 
-## 📋 Requirements
+## Requirements
 
 - A [Bankr](https://bankr.bot) account (free tier works, Bankr Club recommended for automations)
 - NFT operations require sufficient ETH/WETH balance on the target chain
 
 ---
 
-## 🛠️ Structure
+## Structure
 
 ```
 kleos/
@@ -129,6 +129,6 @@ kleos/
 
 ---
 
-## 📄 License
+## License
 
 MIT © 2026 Kleos — free to use, modify, and distribute.
