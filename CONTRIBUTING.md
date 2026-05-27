@@ -6,11 +6,11 @@ Thanks for helping make Kleos better. Here's how to contribute.
 
 | Type | How |
 |------|-----|
-| 🐛 **Bug reports** | Open an [Issue](https://github.com/Lubitzy/kleos/issues) with steps to reproduce |
-| 💡 **Feature ideas** | Open an Issue with `[Feature]` prefix |
-| 🔧 **Code** | Fork → branch → PR |
-| 📝 **Docs** | Fix typos, improve clarity, add examples |
-| ⚡ **Presets** | Share your automation commands in Discussions |
+| **Bug reports** | Open an [Issue](https://github.com/Lubitzy/kleos/issues) with steps to reproduce |
+| **Feature ideas** | Open an Issue with `[Feature]` prefix |
+| **Code** | Fork → branch → PR |
+| **Docs** | Fix typos, improve clarity, add examples |
+| **Presets** | Share your automation commands in Discussions |
 
 ## Skill Development
 
