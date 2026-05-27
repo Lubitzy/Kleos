@@ -48,7 +48,7 @@ install the skill at https://github.com/Lubitzy/kleos/tree/main
 
 **That's it.** Kleos activates automatically whenever you talk about NFTs.
 
-### ✅ Verify Installation
+### Verify Installation
 
 Test that Kleos is working with these quick commands:
 
