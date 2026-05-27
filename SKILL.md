@@ -1,12 +1,12 @@
 ---
-name: kleos
+name: Kleos Agent
 description: Kleos — an NFT trading and portfolio management agent. Use when the user asks about NFTs — buying, selling, minting, floor sweeping, collection monitoring, portfolio tracking, airdrop eligibility checking, or NFT transfers. Covers strategies like floor sweeper, mint sniper, and portfolio management on EVM chains (Base, Ethereum, Polygon, Unichain). Named after the Greek concept of eternal glory earned through heroic deeds.
 tags: [nft, trading, portfolio, minting, airdrop, transfers, kleos]
 version: 1
 visibility: private
 metadata:
   clawdbot:
-    emoji: "🏛️"
+    emoji:
     homepage: "https://bankr.bot/agents"
 ---
 
