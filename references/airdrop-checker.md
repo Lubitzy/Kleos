@@ -1,6 +1,50 @@
 # Airdrop Checker Strategy
 
-Check NFT and token airdrop eligibility for wallet addresses, monitor community airdrops, and track claimed/unclaimed airdrops.
+Check NFT and token airdrop eligibility for **any wallet address** — Bankr wallet (auto-detected) or external wallets (MetaMask, Ledger, Phantom, etc.). Monitor community airdrops, and track claimed/unclaimed airdrops.
+
+## Multi-Wallet Support
+
+Kleos checks your **Bankr wallet** automatically. For external wallets, just provide the address:
+
+```
+"check airdrop eligibility for 0x1234..."
+"check if 0xabcd... is eligible for [project] airdrop"
+"add wallet 0x1234... to my airdrop tracker"
+```
+
+### Managing Wallets
+
+```
+"add wallet 0x1234... as 'Main ETH' to my tracker"
+"add wallet solana:Abc... as 'Solana Vault'"
+"show my tracked wallets"
+"remove wallet 0x1234... from my tracker"
+"check airdrops for ALL my wallets"
+```
+
+Tracked wallets are saved to `/.memory/nft-airdrops.md`:
+```markdown
+## Tracked Wallets
+- Bankr (Base): 0xbankr... — auto
+- Main ETH: 0x1234... — added: [date]
+- Solana Vault: solana:Abc... — added: [date]
+- Cold Storage: 0x5678... — added: [date]
+```
+
+### Batch External Wallet Check
+
+```
+"check airdrops for wallets: 0x1234..., 0x5678..., solana:Abc..."
+"scan all my tracked wallets for new airdrops"
+```
+
+**Agent steps:**
+1. For each wallet, use browser automation on claim pages
+2. Most claim pages accept wallet address input directly
+3. Present per-wallet eligibility summary
+4. Flag which wallet needs to claim (user must do it manually from that wallet)
+
+> ⚠️ Kleos can CHECK eligibility for external wallets, but can only CLAIM from the Bankr wallet. For external wallets, the user must claim manually using that wallet's interface.
 
 ## Understanding Airdrops
 
@@ -17,19 +61,23 @@ Bankr does not have a native "check airdrop" tool. Use **browser automation** to
 ### For a Specific Project
 
 ```
-Prompt: "check if I'm eligible for the [project] airdrop"
-Prompt: "am I eligible for [token] airdrop?"
+"check if I'm eligible for the [project] airdrop"
+"am I eligible for [token] airdrop?"
+"check if 0x1234... is eligible for [project]"
+"check [project] eligibility for all my tracked wallets"
 ```
 
 **Agent steps:**
-1. Ask the user for the official airdrop claim URL (or search for "[project] airdrop claim" using browser)
-2. Navigate to the claim page using browser automation
-3. If the page requires wallet connection, instruct the user: "Connect your wallet at [URL] to check eligibility. Bankr cannot connect to external dApps directly."
-4. If the page accepts a wallet address input:
-   - Get the user's wallet address from Bankr (ask `"what's my address on [chain]?"`)
-   - Enter the address on the claim page
-   - Read the result
-5. Report: eligible amount, claim deadline, any conditions
+1. Determine which wallet(s) to check — user's Bankr wallet (default) or provided address(es)
+2. Ask the user for the official airdrop claim URL (or search for "[project] airdrop claim" using browser)
+3. Navigate to the claim page using browser automation
+4. If the page requires wallet connection, instruct the user: "Connect your wallet at [URL] to check eligibility. Bankr cannot connect to external dApps directly."
+5. If the page accepts a wallet address input:
+   - For Bankr wallet: get the address (`"what's my address on [chain]?"`)
+   - For external wallets: use the address the user provided
+   - Enter the address(es) on the claim page
+   - Read and report results
+6. Report: eligible amount, claim deadline, any conditions, which wallet is eligible
 
 ### Check Known Airdrop Platforms
 
@@ -194,16 +242,33 @@ Prompt: "check if I'm on the whitelist for [collection] mint"
 For community airdrops with multiple phases (e.g., "Phase 1: Early Users, Phase 2: Holders"):
 
 ```
-Prompt: "check which airdrop phases I'm eligible for in [project]"
+"check which airdrop phases I'm eligible for in [project]"
+"check [project] phases for all my tracked wallets"
 ```
 
 **Agent steps:**
 1. Get project's airdrop phases documentation
-2. For each phase, check criteria against the user's wallet:
+2. For each wallet, for each phase, check criteria:
    - Phase 1 (Early Users): Check if wallet interacted with protocol before date X
    - Phase 2 (Holders): Check if wallet held token/NFT at snapshot
    - Phase 3 (Community): Check Discord/Twitter engagement (may need manual verification)
-3. Present phase-by-phase eligibility
+3. Present phase-by-phase eligibility per wallet:
+
+```
+🎁 [Project] Phases — Wallet: Main ETH (0x1234...)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Phase 1 (Early Users): 200 TOKEN
+✅ Phase 2 (Holders): 300 TOKEN
+❌ Phase 3 (Community): Not eligible
+Total: 500 TOKEN
+
+🎁 [Project] Phases — Wallet: Bankr (0xbankr...)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+❌ Phase 1 (Early Users): No activity before snapshot
+❌ Phase 2 (Holders): No tokens held
+❌ Phase 3 (Community): Not eligible
+Total: 0 TOKEN — wallet not eligible
+```
 
 ## Airdrop Value Tracking
 

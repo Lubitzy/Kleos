@@ -71,7 +71,7 @@ For full step-by-step workflows, see the reference files:
 - **Floor Sweeper** → `references/floor-sweeper.md` — Advanced floor sweeping: batch purchases, auto-profit targets, multi-collection sweeping, automated relisting
 - **Mint Sniper** → `references/mint-sniper.md` — Monitoring new drops, auto-mint strategies, collection research before minting
 - **Portfolio Manager** → `references/portfolio-manager.md` — Portfolio tracking, floor alerts, PnL calculation, offer management
-- **Airdrop Checker** → `references/airdrop-checker.md` — Eligibility checking workflows, community airdrop monitoring, wallet checking
+- **Airdrop Checker** → `references/airdrop-checker.md` — Eligibility checking workflows, community airdrop monitoring, multi-wallet support (Bankr + external MetaMask/Ledger/Phantom wallets)
 
 Load the relevant reference file when the user's request matches its topic.
 

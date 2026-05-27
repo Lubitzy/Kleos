@@ -2,7 +2,27 @@
 
 Copy any of these commands directly into your Bankr agent.
 
-## Eligibility Check
+> 💡 Kleos checks your **Bankr wallet** automatically. For external wallets (MetaMask, Ledger, Phantom), just provide the address. Kleos checks eligibility but cannot claim from external wallets — you'll need to claim manually from that wallet's interface.
+
+## Wallet Management
+
+```
+add wallet 0x1234... as 'Main ETH' to my airdrop tracker
+```
+
+```
+add wallet solana:Abc... as 'Solana Vault'
+```
+
+```
+show my tracked wallets
+```
+
+```
+remove wallet 0x1234... from my tracker
+```
+
+## Eligibility Check (Bankr Wallet)
 
 ```
 check if I'm eligible for the [project] airdrop
@@ -16,14 +36,32 @@ am I eligible for any airdrops right now?
 what airdrop phases am I eligible for in [project]?
 ```
 
-## Batch Check
+## Eligibility Check (External Wallets)
 
 ```
-check my airdrop eligibility for [project A], [project B], [project C]
+check if 0x1234... is eligible for [project] airdrop
 ```
 
 ```
-check all tracked airdrops in my airdrop tracker for eligibility
+check [project] eligibility for wallet 0x5678...
+```
+
+```
+check [project] phases for 0xabcd... — which phases are they eligible for?
+```
+
+## Batch Multi-Wallet Check
+
+```
+check airdrop eligibility for 0x1234..., 0x5678..., and solana:Abc...
+```
+
+```
+check [project] eligibility for all my tracked wallets
+```
+
+```
+scan all my wallets for any unclaimed airdrops
 ```
 
 ## Airdrop Discovery
