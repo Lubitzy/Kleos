@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c9a84c"/>
+      <stop offset="50%" style="stop-color:#f5d061"/>
+      <stop offset="100%" style="stop-color:#c9a84c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="400" fill="url(#bg)"/>
+
+  <!-- Greek key border top -->
+  <g fill="none" stroke="url(#gold)" stroke-width="1.5" opacity="0.3">
+    <path d="M0,0 h40 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30"/>
+    <path d="M0,400 h40 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30 h20 v30 h20 v-30"/>
+  </g>
+
+  <!-- Left column -->
+  <g transform="translate(60, 60)" opacity="0.4">
+    <rect x="0" y="280" width="24" height="4" fill="#c9a84c"/>
+    <rect x="8" y="268" width="8" height="16" fill="#c9a84c"/>
+    <rect x="0" y="252" width="24" height="4" fill="#c9a84c"/>
+    <rect x="0" y="160" width="24" height="4" fill="#c9a84c"/>
+    <rect x="8" y="148" width="8" height="16" fill="#c9a84c"/>
+    <rect x="0" y="132" width="24" height="4" fill="#c9a84c"/>
+    <rect x="0" y="40" width="24" height="4" fill="#c9a84c"/>
+    <rect x="8" y="28" width="8" height="16" fill="#c9a84c"/>
+    <rect x="0" y="12" width="24" height="4" fill="#c9a84c"/>
+    <!-- pillar shaft -->
+    <rect x="6" y="44" width="12" height="88" fill="#c9a84c" opacity="0.6"/>
+    <rect x="6" y="164" width="12" height="88" fill="#c9a84c" opacity="0.6"/>
+  </g>
+
+  <!-- Right column -->
+  <g transform="translate(1116, 60)" opacity="0.4">
+    <rect x="0" y="280" width="24" height="4" fill="#c9a84c"/>
+    <rect x="8" y="268" width="8" height="16" fill="#c9a84c"/>
+    <rect x="0" y="252" width="24" height="4" fill="#c9a84c"/>
+    <rect x="0" y="160" width="24" height="4" fill="#c9a84c"/>
+    <rect x="8" y="148" width="8" height="16" fill="#c9a84c"/>
+    <rect x="0" y="132" width="24" height="4" fill="#c9a84c"/>
+    <rect x="0" y="40" width="24" height="4" fill="#c9a84c"/>
+    <rect x="8" y="28" width="8" height="16" fill="#c9a84c"/>
+    <rect x="0" y="12" width="24" height="4" fill="#c9a84c"/>
+    <rect x="6" y="44" width="12" height="88" fill="#c9a84c" opacity="0.6"/>
+    <rect x="6" y="164" width="12" height="88" fill="#c9a84c" opacity="0.6"/>
+  </g>
+
+  <!-- Temple emoji -->
+  <text x="600" y="130" text-anchor="middle" font-size="64" filter="url(#glow)">🏛️</text>
+
+  <!-- Title -->
+  <text x="600" y="210" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="72" font-weight="700" fill="url(#gold)" filter="url(#glow)" letter-spacing="12">KLEOS</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="260" text-anchor="middle" font-family="'DM Mono', monospace" font-size="20" fill="#c9a84c" opacity="0.8" letter-spacing="6">AI NFT AGENT FOR BANKR</text>
+
+  <!-- Tagline -->
+  <text x="600" y="310" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#a78bfa" opacity="0.7" font-style="italic">κλέος — eternal glory through heroic deeds</text>
+
+  <!-- Bottom badges -->
+  <g transform="translate(600, 355)" text-anchor="middle">
+    <rect x="-200" y="-18" width="70" height="28" rx="14" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
+    <text y="0" font-family="'DM Mono', monospace" font-size="11" fill="#c9a84c" opacity="0.7">FLOOR</text>
+    <rect x="-115" y="-18" width="70" height="28" rx="14" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
+    <text y="0" x="-80" font-family="'DM Mono', monospace" font-size="11" fill="#c9a84c" opacity="0.7">SNIPE</text>
+    <rect x="-30" y="-18" width="70" height="28" rx="14" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
+    <text y="0" x="5" font-family="'DM Mono', monospace" font-size="11" fill="#c9a84c" opacity="0.7">TRACK</text>
+    <rect x="55" y="-18" width="70" height="28" rx="14" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.5"/>
+    <text y="0" x="90" font-family="'DM Mono', monospace" font-size="11" fill="#a78bfa" opacity="0.7">CLAIM</text>
+    <rect x="140" y="-18" width="70" height="28" rx="14" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.5"/>
+    <text y="0" x="175" font-family="'DM Mono', monospace" font-size="11" fill="#a78bfa" opacity="0.7">PROFIT</text>
+  </g>
+</svg>

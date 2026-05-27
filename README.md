@@ -1,5 +1,9 @@
 # Kleos — NFT Agent for Bankr
 
+<p align="center">
+  <img src="assets/banner.svg" alt="Kleos — AI NFT Agent for Bankr" width="100%">
+</p>
+
 > *κλέος* — the Greek concept of eternal glory earned through heroic deeds.  
 > **Kleos hunts NFT glory** — sweeping floors, sniping mints, managing portfolios, and claiming airdrops.
 
@@ -114,6 +118,8 @@ NFT operations are available on: **Base**, **Ethereum**, **Polygon**, **Unichain
 ```
 kleos/
 ├── SKILL.md                    # Core skill instructions
+├── assets/
+│   └── banner.svg              # Repo banner
 ├── references/                 # Detailed workflow docs (loaded on demand)
 │   ├── floor-sweeper.md        # Floor sweeping strategies
 │   ├── mint-sniper.md          # Mint sniping workflows
@@ -124,7 +130,8 @@ kleos/
 │   ├── sniper.md
 │   ├── portfolio.md
 │   └── airdrop.md
-└── LICENSE                     # MIT
+├── LICENSE                     # MIT
+└── CONTRIBUTING.md             # Contribution guide
 ```
 
 ---
